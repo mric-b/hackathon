@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NFC SUMMIT 2024 | AGENTS vs AGENTS HACKATHON</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#000000",
+              "on-background": "#ffffff",
+              "secondary": "#00fc40",
+              "tertiary-container": "#cafd00",
+              "background": "#0e0e0e",
+              "primary-dim": "#2be800",
+              "surface-container-high": "#201f1f",
+              "on-primary": "#0d6100",
+              "outline-variant": "#484847",
+              "inverse-on-surface": "#565555",
+              "on-primary-container": "#0b5800",
+              "on-surface-variant": "#adaaaa",
+              "on-tertiary-container": "#4a5e00",
+              "error-dim": "#d53d18",
+              "on-primary-fixed-variant": "#0d6200",
+              "inverse-primary": "#106f00",
+              "surface": "#0e0e0e",
+              "primary": "#8eff71",
+              "secondary-container": "#006e16",
+              "on-tertiary-fixed": "#3a4a00",
+              "surface-tint": "#8eff71",
+              "secondary-dim": "#00ec3b",
+              "surface-bright": "#2c2c2c",
+              "on-error-container": "#ffd2c8",
+              "on-secondary-fixed-variant": "#006513",
+              "tertiary-fixed": "#cafd00",
+              "on-secondary-container": "#e6ffdc",
+              "on-tertiary": "#516700",
+              "error-container": "#b92902",
+              "primary-fixed": "#2ff801",
+              "surface-container-low": "#131313",
+              "primary-fixed-dim": "#2be800",
+              "surface-container": "#1a1919",
+              "on-error": "#450900",
+              "tertiary-dim": "#beee00",
+              "on-secondary": "#005a10",
+              "surface-container-highest": "#262626",
+              "surface-variant": "#262626",
+              "surface-dim": "#0e0e0e",
+              "secondary-fixed-dim": "#00ec3b",
+              "tertiary-fixed-dim": "#beee00",
+              "on-secondary-fixed": "#00440a",
+              "on-surface": "#ffffff",
+              "on-primary-fixed": "#064200",
+              "on-tertiary-fixed-variant": "#526900",
+              "primary-container": "#2ff801",
+              "outline": "#767575",
+              "error": "#ff7351",
+              "secondary-fixed": "#00fc40",
+              "inverse-surface": "#fcf9f8",
+              "tertiary": "#f3ffca"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0rem", "lg": "0rem", "xl": "0rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .crt-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        .pixel-grid {
+            background-image: radial-gradient(circle, #484847 1px, transparent 1px);
+            background-size: 32px 32px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- NAVIGATION SHELL -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-3 bg-[#131313] py-4 shadow-[0_0_20px_rgba(142,255,113,0.08)]">
+<div class="text-xl font-bold text-[#8eff71] tracking-tighter font-['Space_Grotesk'] uppercase">
+            NFC_SUMMIT_2024
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#8eff71] border-b-0 font-bold after:content-['_'] after:animate-pulse" href="#">TERMINAL</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#8eff71]/60 hover:text-[#00fc40] hover:bg-[#1a1919] transition-all duration-200" href="#">TRACKS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#8eff71]/60 hover:text-[#00fc40] hover:bg-[#1a1919] transition-all duration-200" href="#">TIMELINE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-widest text-sm text-[#8eff71]/60 hover:text-[#00fc40] hover:bg-[#1a1919] transition-all duration-200" href="#">PARTNERS</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-primary text-on-primary px-4 py-2 font-label text-sm font-bold uppercase tracking-tighter hover:shadow-[0_0_15px_rgba(142,255,113,0.4)] transition-all active:scale-95" href="https://luma.com/390ixwfb">EXECUTE_REGISTRATION</a>
+<span class="material-symbols-outlined text-primary cursor-pointer">terminal</span>
+</div>
+</nav>
+<main class="relative pt-20">
+<!-- HERO SECTION -->
+<section class="relative min-height-[921px] flex flex-col items-center justify-center overflow-hidden py-24 px-6 border-b border-outline-variant/10">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale contrast-125" data-alt="Cyberpunk digital terminal with green code rain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk9-zspZTLeEd4VxXT_E2honbsFedqXDqx8QuuIsMADwBWFBoKHX7GwlXD6VAMCpQfJB9qd-iv5cQtTsB6Jn-kjbviPQKB2MhfpFWgrBOxT206zOWmXEsjWkqcUrQEhfjRr_u6aD8X71Pvtzas4xArW7jaNmZ9RF0M0WWFcwal9UrW8VoY6RXicyKHqW6Lyq3YR7YBbPxUUG-1KQ8lczVj-9MdYnzfPAGOsQI-rIrcUXRLJHYl3p1ME3yuvwG4NkP1GpirjLv40Ko"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+<div class="absolute inset-0 pixel-grid"></div>
+</div>
+<div class="relative z-10 max-w-5xl text-center space-y-8">
+<div class="inline-block px-3 py-1 bg-surface-container-highest border border-primary/20 text-secondary font-label text-xs tracking-widest mb-4 uppercase">
+                    &gt; STATUS: INITIALIZING_SEQUENCE...
+                </div>
+<h1 class="font-headline font-bold text-5xl md:text-8xl tracking-tight leading-none text-on-background">
+                    NFC SUMMIT <br/>
+<span class="text-primary italic">AGENTS vs AGENTS</span> <br/>
+                    HACKATHON
+                </h1>
+<div class="max-w-2xl mx-auto space-y-6">
+<p class="font-headline text-primary text-xl md:text-2xl font-medium tracking-wide">
+                        'The arena where everyone can code'
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        Whether you are a seasoned coder or have never written a single line of code in your life, this hackathon is for you. It is a radically inclusive space where top tech innovators build alongside absolute beginners.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+<a class="bg-primary text-on-primary px-10 py-4 font-label font-extrabold text-lg uppercase tracking-widest hover:shadow-[0_0_20px_#8eff71] transition-all" href="https://luma.com/390ixwfb">
+                        EXECUTE_REGISTRATION
+                    </a>
+<a class="border border-primary/40 text-primary px-10 py-4 font-label font-bold text-lg uppercase tracking-widest hover:bg-primary/10 transition-all" href="#">
+                        SPONSOR_NODE
+                    </a>
+</div>
+</div>
+</section>
+<!-- STATS BAR -->
+<section class="bg-surface-container-low py-12 border-y border-outline-variant/10 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
+<div class="space-y-1">
+<div class="font-headline text-4xl font-bold text-primary">4,200+</div>
+<div class="font-label text-xs text-on-surface-variant tracking-widest uppercase">Nodes_Connected (Visitors)</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline text-4xl font-bold text-primary">59</div>
+<div class="font-label text-xs text-on-surface-variant tracking-widest uppercase">Global_Sectors (Countries)</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline text-4xl font-bold text-primary">39.8%</div>
+<div class="font-label text-xs text-on-surface-variant tracking-widest uppercase">Core_Engineers (Devs/Entrep)</div>
+</div>
+</div>
+</section>
+<!-- WHO CAN JOIN - BENTO GRID -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-4 mb-16">
+<h2 class="font-headline text-4xl font-bold tracking-tighter uppercase">&gt; WHO_CAN_JOIN?</h2>
+<div class="h-px flex-grow bg-primary/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Beginners -->
+<div class="md:col-span-7 bg-surface-container p-8 border-l-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-primary/40 text-5xl font-black">01</span>
+<span class="material-symbols-outlined text-primary text-4xl group-hover:animate-pulse">school</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 uppercase">Beginners</h3>
+<p class="text-on-surface-variant text-lg">Absolute beginners / No-code experience? Join us! Discover <span class="text-primary font-mono">"Vibe Coding"</span>.</p>
+</div>
+<!-- Pros -->
+<div class="md:col-span-5 bg-surface-container p-8 border-l-4 border-secondary hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-secondary/40 text-5xl font-black">02</span>
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:rotate-12 transition-transform">terminal</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 uppercase">Pros</h3>
+<p class="text-on-surface-variant text-lg">Developers and tech pros? Come break the code! Engineer complex AI Agents and test latest APIs.</p>
+</div>
+<!-- Creatives -->
+<div class="md:col-span-5 bg-surface-container p-8 border-l-4 border-tertiary-fixed hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-tertiary-fixed/40 text-5xl font-black">03</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl group-hover:scale-110 transition-transform">palette</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 uppercase">Creatives</h3>
+<p class="text-on-surface-variant text-lg">Creatives, Artists, and Designers? Dictate the vision while AI handles the tech.</p>
+</div>
+<!-- Entrepreneurs -->
+<div class="md:col-span-7 bg-surface-container p-8 border-l-4 border-primary-dim hover:bg-surface-container-high transition-colors group">
+<div class="flex justify-between items-start mb-12">
+<span class="font-label text-primary-dim/40 text-5xl font-black">04</span>
+<span class="material-symbols-outlined text-primary-dim text-4xl group-hover:translate-x-2 transition-transform">rocket_launch</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4 uppercase">Entrepreneurs</h3>
+<p class="text-on-surface-variant text-lg">Build your next MVP in hours! Pitch to tech leaders and investors.</p>
+</div>
+</div>
+</section>
+<!-- TIMELINE SECTION -->
+<section class="py-24 bg-surface-container-lowest relative">
+<div class="absolute inset-0 opacity-5 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="Technical schematic showing a linear progress timeline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrzrKmuAKRl9cOpFRz5mNEz51gd6r7HakXmJKzxSErgoqIA8N7-d-AU0BUWpH3yajUU0jQx1nC6MVMFLkzH8Sr6vWKQw-IyqVM0YvosFHcZr8S8gW7YPCpGnsPj7Hh89qA20UbtVnoUubN7Ei0aogeNyUIQJvEWafGVvmGn_jcChyTL8YD53w3x0Y396DtXpYSYeZzlpxeTzlb8qu5HAsiM6H6gCqcBtYAmsoIzjtppA_FmZFX5kx3feDlq7YJZmDG36ofNy4EM0E"/>
+</div>
+<div class="max-w-5xl mx-auto px-6 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-widest mb-2 italic">EXECUTION_SEQUENCE</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="space-y-0 relative before:absolute before:left-[19px] before:top-0 before:h-full before:w-px before:bg-outline-variant/30">
+<!-- Sequence 1 -->
+<div class="flex gap-8 pb-12 group">
+<div class="relative z-10 w-10 h-10 flex-shrink-0 bg-background border-2 border-primary flex items-center justify-center font-label font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">01</div>
+<div class="pt-1">
+<h4 class="font-headline text-xl font-bold mb-1 uppercase tracking-wider">SYSTEM_INITIALIZATION</h4>
+<p class="text-on-surface-variant font-label text-sm">Doors open. Hardware sync. Team assembly phase.</p>
+</div>
+</div>
+<!-- Sequence 2 -->
+<div class="flex gap-8 pb-12 group">
+<div class="relative z-10 w-10 h-10 flex-shrink-0 bg-background border-2 border-primary flex items-center justify-center font-label font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">02</div>
+<div class="pt-1">
+<h4 class="font-headline text-xl font-bold mb-1 uppercase tracking-wider">AGENT_DEPLOYMENT</h4>
+<p class="text-on-surface-variant font-label text-sm">Main coding sprint. AI integration and prompt engineering.</p>
+</div>
+</div>
+<!-- Sequence 3 -->
+<div class="flex gap-8 pb-12 group">
+<div class="relative z-10 w-10 h-10 flex-shrink-0 bg-background border-2 border-primary flex items-center justify-center font-label font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">03</div>
+<div class="pt-1">
+<h4 class="font-headline text-xl font-bold mb-1 uppercase tracking-wider">STRESS_TEST</h4>
+<p class="text-on-surface-variant font-label text-sm">Mentorship rounds. Debugging. Prototype hardening.</p>
+</div>
+</div>
+<!-- Sequence 4 -->
+<div class="flex gap-8 group">
+<div class="relative z-10 w-10 h-10 flex-shrink-0 bg-background border-2 border-primary flex items-center justify-center font-label font-bold text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">04</div>
+<div class="pt-1">
+<h4 class="font-headline text-xl font-bold mb-1 uppercase tracking-wider">FINAL_EXECUTION</h4>
+<p class="text-on-surface-variant font-label text-sm">Main stage pitches. Agent duels. Awarding sequence.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PARTNERS -->
+<section class="py-24 px-6 bg-background relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 opacity-20 translate-x-1/4 pointer-events-none">
+<img class="w-full grayscale brightness-150" data-alt="Futuristic tech mascot or robot character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcAlxz75lSvb2UdPDbS2TlHDUO20xSF5dn9l6oTfQW2FRWwTZjNOhcIkRJb-CCA5c_SS04sSCGlHWF4XAyQM54xl7a7xY5rFjdY5gmPrfKEduLoFmQ4yt-mhBp7ShOzFfJjnjfI8351KubokLpmn54kFa781qTOSCmVCc7yUBxhA9Q1Lt4NstwX3KcNH54wqS9L4X1H6q2sZhvcV43RBpTgdg6AOAfgR92DH2dZgYa6HWW04D7ZVM6bRbLtqB04w0Mu-3CgJYXP9k"/>
+</div>
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline text-5xl font-black mb-16 tracking-tighter text-on-surface/90 border-l-8 border-primary pl-6 uppercase">PARTNERS</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="relative group aspect-video bg-surface-container border border-outline-variant/10 flex items-center justify-center overflow-hidden">
+<img class="w-1/2 opacity-10 grayscale brightness-0" data-alt="Corporate logo silhouette placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqUlyeTqPZdPBrt6tUjWEiEMLH9h1Dffd0-Ha6cE_C14QSrkp57nypwHToOYCiUQ1Nn_jBzdxl7r8NOp9B7qCQz8uOenFQhOPBA0bPqI9ORe3rY2hBIk46bVTclm_bfxKp8pnsZSVAnKzF2TAUQ7iCN_U4UH6vJ_1i1uE86jAlq2PfAbaBFembnIzv61N-UQSNzdUlZ5srnn_frX9iXDmedx5dFpjSC4HD8lz0PDAm9nAtx_k8jMKRH8Hor85LmooEJVWujKnFRKo"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/80 opacity-100 group-hover:bg-primary/10 transition-colors">
+<span class="font-label text-xs tracking-widest font-bold text-primary animate-pulse">COMING SOON</span>
+</div>
+</div>
+<div class="relative group aspect-video bg-surface-container border border-outline-variant/10 flex items-center justify-center overflow-hidden">
+<img class="w-1/2 opacity-10 grayscale brightness-0" data-alt="Corporate logo silhouette placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKUN1UgItU07ODCExCKTR3oX4uq2_QNnBlx9AYqSBY2IjtUrKDq2DJQC0qy6uykEofYnzNmamXKMMUi_T4AM1g1DVKCdgG9nlWB6ppHXNOdkuwN1t0DQUQJGSU2UEtGk3i6c5cG231WuVX9pAm_zgpfXdHJNfkGy9urKAx7LypaIFksAS1WO7gjDTxOkibgbp_YoXH4QlciioGhwieiuJaR61FwA1y95Om6Zt8cRx9xR8EHmq2op4kwPPY57mKHaMsv9fDKTenoes"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/80 opacity-100 group-hover:bg-primary/10 transition-colors">
+<span class="font-label text-xs tracking-widest font-bold text-primary">COMING SOON</span>
+</div>
+</div>
+<div class="relative group aspect-video bg-surface-container border border-outline-variant/10 flex items-center justify-center overflow-hidden">
+<img class="w-1/2 opacity-10 grayscale brightness-0" data-alt="Corporate logo silhouette placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXOPEOGbMrnKopYl9VbW26EIMsVd570-CgJNoKn_AVUNNN8WjzzddGKvnxtkoj9AqJ03mOJawK-EhunHlpyA0XysYRrbsGqpXnBPVKR4a1WJbqlMxa-DpEfuFgEY9n5Sc_IR_6n7VE31NcnETuZFQkiVNFMwiJPtafJ_XTpmWQHzbNVuC3XfemvtZfdeaRl2DD4c4zS1AevoSS9zGxf41v6GTtMXot8i9AnrsRrUw5RZz2oQtiMqjC6o6KfphL0mqYVdiHJlQZbU"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/80 opacity-100 group-hover:bg-primary/10 transition-colors">
+<span class="font-label text-xs tracking-widest font-bold text-primary">COMING SOON</span>
+</div>
+</div>
+<div class="relative group aspect-video bg-surface-container border border-outline-variant/10 flex items-center justify-center overflow-hidden">
+<img class="w-1/2 opacity-10 grayscale brightness-0" data-alt="Corporate logo silhouette placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXnXgsZ3_vkns2b4r4iQmFefBp5Akf2gWsNuE2ZVBvSIJr6wUf1RXZQwJTo5LrxCKCPxeRWZSStWdmCrcohVc7k5X08RQkGEJntd7SnPivowW6zOJmDCttsY0X7_HWnXcKgQ9ftOFy1QFRfN3RDuv4ia2jX2gA-iAKpvGB9jv4wbfcSKTChZOtPRfy5x4HXSLxBtSmcpfLFL2x0BHQMtW5tkCj9z9mSsFrJoc3ciCseZ2Nfl8fcorgPAHMkuUMvrgL5jE6J9vsnEE"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/80 opacity-100 group-hover:bg-primary/10 transition-colors">
+<span class="font-label text-xs tracking-widest font-bold text-primary">COMING SOON</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="py-32 px-6 text-center bg-surface-container-low border-t border-primary/20">
+<div class="max-w-3xl mx-auto space-y-10">
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tight uppercase leading-tight">READY TO <span class="text-primary underline decoration-dotted underline-offset-8">VIBE CODE</span>?</h2>
+<p class="text-on-surface-variant font-label text-lg">Secure your slot in the most inclusive hackathon of 2024. Limited terminal access available.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="bg-primary text-on-primary px-12 py-5 font-label font-extrabold text-xl uppercase tracking-widest shadow-[0_0_30px_rgba(142,255,113,0.3)] hover:shadow-[0_0_50px_rgba(142,255,113,0.5)] transition-all" href="https://luma.com/390ixwfb">
+                        INITIALIZE_REGISTRATION
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-[#0e0e0e] mt-20 py-6 px-8 border-t border-[#8eff71]/10">
+<div class="w-full flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-mono text-[10px] tracking-mono text-[#00fc40]">
+                SYSTEM_STATUS: ACTIVE // CONNECTION_SECURE
+            </div>
+<div class="flex gap-8">
+<a class="font-mono text-[10px] tracking-mono text-[#00fc40]/50 hover:text-[#8eff71] underline decoration-dotted transition-opacity duration-300" href="#">DECODE_TERMS</a>
+<a class="font-mono text-[10px] tracking-mono text-[#00fc40]/50 hover:text-[#8eff71] underline decoration-dotted transition-opacity duration-300" href="#">ENCRYPTED_PRIVACY</a>
+<a class="font-mono text-[10px] tracking-mono text-[#00fc40]/50 hover:text-[#8eff71] underline decoration-dotted transition-opacity duration-300" href="#">MANIFESTO</a>
+</div>
+<div class="font-mono text-[10px] tracking-mono text-[#00fc40]/30 uppercase">
+                © 2024 NFC_CORP
+            </div>
+</div>
+</footer>
+<div class="fixed inset-0 pointer-events-none crt-overlay z-[100] opacity-20"></div>
+</body></html>
